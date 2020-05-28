@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mak-service
+  labels:
+    app: mak-devops-project
+spec:
+  selector:
+    app: mak-devops-project
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 31200
